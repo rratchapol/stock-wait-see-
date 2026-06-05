@@ -1,0 +1,14 @@
+{
+  "name": "us-stock-wait-see-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "report": "node src/daily-report.js",
+    "report:sample": "node src/daily-report.js --sample",
+    "screen": "node src/daily-report.js --screen-only"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

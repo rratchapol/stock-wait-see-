@@ -1,0 +1,51 @@
+{
+  "portfolioThb": 100000,
+  "riskPerTradePct": 2,
+  "maxAllocationPctPerStock": 35,
+  "selection": {
+    "enabled": true,
+    "maxCandidates": 15,
+    "minSelectionScore": 45
+  },
+  "fundamentalOverridesPaused": {},
+  "earnings": {
+    "NVDA": {
+      "nextDate": "2026-08-20",
+      "holdThroughEarnings": false
+    }
+  },
+  "newsNotes": {
+    "NVDA": [
+      {
+        "date": "2026-06-05",
+        "type": "manual",
+        "impact": "medium",
+        "note": "ตัวอย่าง note: หากใกล้ประกาศงบ ให้รอหลังงบหรือใช้ position size เล็กลง"
+      }
+    ]
+  },
+  "tickers": [
+    "AAPL",
+    "MSFT",
+    "NVDA",
+    "GOOGL",
+    "AMZN",
+    "META",
+    "AVGO",
+    "AMD",
+    "CRM",
+    "TSLA"
+  ],
+  "positionTemplate": {
+    "ticker": "NVDA",
+    "avgCost": 210,
+    "shares": 2,
+    "entryDate": "2026-06-01",
+    "thesis": "Quality growth pullback",
+    "stopLoss": 195,
+    "takeProfit1": 245,
+    "takeProfit2": 280,
+    "riskNotes": []
+  },
+  "positions": []
+}

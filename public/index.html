@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Stock Wait & See Agent Office</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.165.0/build/three.module.js"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">WS</div>
+        <div>
+          <strong>Wait & See</strong>
+          <span>Agent Office</span>
+        </div>
+      </div>
+      <nav>
+        <a href="/dashboard" data-route="/dashboard">Dashboard</a>
+        <a href="/office" data-route="/office">Agent Office</a>
+        <a href="/watchlist" data-route="/watchlist">Watchlist</a>
+        <a href="/positions" data-route="/positions">Positions</a>
+        <a href="/events" data-route="/events">News</a>
+      </nav>
+      <div class="sidebar-note">
+        <span>Daily Brief</span>
+        <strong id="sidebarRegime">Loading</strong>
+      </div>
+    </aside>
+
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow" id="pageEyebrow">US Stock Decision Support</p>
+          <h1 id="pageTitle">Agent Office Dashboard</h1>
+        </div>
+        <div class="top-actions">
+          <span id="generatedAt">-</span>
+          <button id="refreshButton" type="button">Refresh</button>
+        </div>
+      </header>
+      <div id="appView"></div>
+    </main>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

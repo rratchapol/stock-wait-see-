@@ -47,5 +47,16 @@
     "takeProfit2": 280,
     "riskNotes": []
   },
-  "positions": []
+  "positions": [
+    {
+      "ticker": "EOSE",
+      "avgCost": 7.17,
+      "shares": 1,
+      "entryDate": "2026-06-05",
+      "stopLoss": 6,
+      "takeProfit1": 9,
+      "takeProfit2": 10,
+      "riskNotes": []
+    }
+  ]
 }

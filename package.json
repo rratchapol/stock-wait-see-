@@ -6,7 +6,8 @@
   "scripts": {
     "report": "node src/daily-report.js",
     "report:sample": "node src/daily-report.js --sample",
-    "screen": "node src/daily-report.js --screen-only"
+    "screen": "node src/daily-report.js --screen-only",
+    "ui": "node src/server.js"
   },
   "engines": {
     "node": ">=18"

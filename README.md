@@ -34,6 +34,34 @@ npm run report:sample
 npm run screen
 ```
 
+หากต้องการเปิด Agent Office UI:
+
+```powershell
+npm run ui
+```
+
+จากนั้นเปิด:
+
+```text
+http://localhost:4173
+```
+
+API ที่ UI ใช้:
+
+```text
+GET /api/dashboard
+```
+
+หน้า UI แยก path แล้ว:
+
+```text
+/dashboard
+/office
+/watchlist
+/positions
+/events
+```
+
 ## ตั้งค่า Watchlist
 
 แก้ไฟล์:
@@ -123,6 +151,19 @@ Agent 3 จะประเมิน:
 - สถานะ `HOLD`, `WATCH CLOSELY`, `TAKE PARTIAL PROFIT`, `REDUCE RISK`, `EXIT`
 - เหตุผลที่ควรถือ/ลด/ขาย/ทบทวน thesis
 
+เพิ่มผ่านเว็บได้ที่:
+
+```text
+http://localhost:4173/positions
+```
+
+ฟอร์ม `Add Position` จะบันทึกลง `config/watchlist.json` ผ่าน API:
+
+```text
+POST /api/positions
+DELETE /api/positions/:ticker
+```
+
 ## News & Earnings Watch
 
 ตอนนี้ระบบรองรับ manual placeholder สำหรับข่าวและ earnings ใน `config/watchlist.json`:
@@ -165,6 +206,29 @@ TODO ภายหลัง:
 - ต่อ news provider หรือ RSS
 - ใช้ Gemini API เพื่อสรุปข่าวและจัด impact อัตโนมัติ
 - เพิ่ม earnings calendar จาก data provider จริง
+
+## Agent Office UI
+
+UI เป็น MVP แบบ zero-dependency ใช้ Node HTTP server และไฟล์ static ใน `public/`
+
+โครงสร้าง:
+
+```text
+public/
+  index.html
+  app.js
+  styles.css
+src/
+  server.js
+  dashboard-data.js
+```
+
+จุดประสงค์:
+
+- แสดง dashboard จาก agent ทั้ง 4 ตัว
+- แสดง Market Regime, Top Watchlist, Buy Zone, Positions, News & Earnings
+- มี Agent Office 3D workspace ด้วย Three.js พร้อมตัวละคร low-poly ขยับเหมือนกำลังทำงาน
+- แยก API JSON ออกจาก UI เพื่อให้ย้ายไป React/Vite หรือเพิ่ม Gemini/news API ได้ง่ายภายหลัง
 
 ## หมายเหตุเรื่องภาษาไทยใน PowerShell
 
